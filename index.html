@@ -1,15 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title> style="color:purple"astralware</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astralware</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            position: relative; /* Needed for positioning the top-left text */
+        }
+
+        .top-left {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 1.5em;
+            color: white;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white background */
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+            position: relative; /* Position relative for the button positioning */
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em; /* Smaller font size for the header */
+        }
+
+        p {
+            font-size: 1.5em;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #7289DA; /* Discord color */
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .button:hover {
+            background-color: #5b6eae; /* Slightly darker shade for hover effect */
+            transform: scale(1.05); /* Slightly enlarge button on hover */
+        }
+    </style>
 </head>
 <body>
-
-<h3 style="text-align:center">Astralware</h3>
-<p style="font-family: Arial; text-align">welcome to astralware!</p>
-
+    <div class="top-left">Astralware</div>
+    <div class="container">
+        <h1>Astralware</h1>
+        <p>Welcome to Astralware!</p>
+        <a href="https://discord.gg/X3wH9W8fXe" target="_blank" class="button">Discord</a>
+    </div>
 </body>
 </html>
-
-
-
