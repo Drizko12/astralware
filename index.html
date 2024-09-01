@@ -68,6 +68,20 @@
             position: relative;
             opacity: 0;
             animation: fadeIn 1s 0.5s forwards; /* Delayed fade in effect */
+            border: 5px solid transparent; /* Initial border setup */
+            animation: borderFlash 1.5s infinite; /* Flashing border effect */
+        }
+
+        @keyframes borderFlash {
+            0% {
+                border-color: rgba(255, 0, 0, 0.5); /* Flashing red */
+            }
+            50% {
+                border-color: rgba(0, 255, 0, 0.5); /* Flashing green */
+            }
+            100% {
+                border-color: rgba(0, 0, 255, 0.5); /* Flashing blue */
+            }
         }
 
         h1 {
