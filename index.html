@@ -16,7 +16,15 @@
             align-items: center;
             height: 100vh;
             text-align: center;
-            position: relative; /* Needed for positioning the top-left text */
+            position: relative;
+            opacity: 0; /* Start with invisible */
+            animation: fadeIn 1s forwards; /* Fade in effect */
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
 
         .top-left {
@@ -25,6 +33,8 @@
             left: 20px;
             font-size: 1.5em;
             color: white;
+            opacity: 0;
+            animation: fadeIn 1s 0.5s forwards; /* Delayed fade in effect */
         }
 
         .container {
@@ -33,12 +43,26 @@
             padding: 20px;
             max-width: 600px;
             width: 100%;
-            position: relative; /* Position relative for the button positioning */
+            position: relative;
+            opacity: 0;
+            animation: fadeIn 1s 0.5s forwards; /* Delayed fade in effect */
         }
 
         h1 {
             margin: 0;
             font-size: 2em; /* Smaller font size for the header */
+            color: white;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            animation: textGlow 1.5s infinite alternate; /* Glowing text effect */
+        }
+
+        @keyframes textGlow {
+            from {
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+            }
         }
 
         p {
@@ -56,12 +80,14 @@
             text-decoration: none;
             cursor: pointer;
             margin-top: 20px;
-            transition: background-color 0.3s, transform 0.2s;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
 
         .button:hover {
             background-color: #5b6eae; /* Slightly darker shade for hover effect */
             transform: scale(1.05); /* Slightly enlarge button on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
         }
     </style>
 </head>
