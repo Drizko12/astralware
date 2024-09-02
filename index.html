@@ -58,18 +58,21 @@
             width: 100%;
             position: relative;
             border: 5px solid rgba(255, 255, 255, 0.5); /* Ensure border color is visible */
-            animation: borderFlash 1.5s infinite; /* Flashing border effect */
+            animation: borderFlash 3s linear infinite; /* Continuous flashing border effect */
         }
 
         @keyframes borderFlash {
             0% {
-                border-color: rgba(255, 0, 0, 0.5); /* Flashing red */
+                border-color: rgba(255, 0, 0, 0.5); /* Red */
             }
-            50% {
-                border-color: rgba(0, 255, 0, 0.5); /* Flashing green */
+            33% {
+                border-color: rgba(0, 255, 0, 0.5); /* Green */
+            }
+            66% {
+                border-color: rgba(0, 0, 255, 0.5); /* Blue */
             }
             100% {
-                border-color: rgba(0, 0, 255, 0.5); /* Flashing blue */
+                border-color: rgba(255, 0, 0, 0.5); /* Red again */
             }
         }
 
