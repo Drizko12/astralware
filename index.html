@@ -34,11 +34,11 @@
             font-size: 1.5em;
             color: white;
             text-decoration: none; /* Remove underline */
-            border: 2px solid transparent;
+            border: 2px solid rgba(255, 255, 255, 0.7);
             padding: 5px 10px;
             border-radius: 5px;
             text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
-            animation: textGlow 1.5s infinite alternate, borderGlow 2s infinite alternate; /* Glowing text and border effects */
+            animation: textGlow 1.5s infinite alternate; /* Glowing text effect */
         }
 
         @keyframes textGlow {
@@ -50,15 +50,6 @@
             }
         }
 
-        @keyframes borderGlow {
-            from {
-                border-color: transparent;
-            }
-            to {
-                border-color: rgba(255, 255, 255, 0.7);
-            }
-        }
-
         .container {
             background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white background */
             border-radius: 15px;
@@ -66,9 +57,7 @@
             max-width: 600px;
             width: 100%;
             position: relative;
-            opacity: 0;
-            animation: fadeIn 1s 0.5s forwards; /* Delayed fade in effect */
-            border: 5px solid transparent; /* Initial border setup */
+            border: 5px solid rgba(255, 255, 255, 0.5); /* Ensure border color is visible */
             animation: borderFlash 1.5s infinite; /* Flashing border effect */
         }
 
